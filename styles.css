@@ -51,6 +51,8 @@ body {
   ul {
     list-style-type: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
   }
   
@@ -84,9 +86,8 @@ body {
     .nav-list {
       display: none;
       position: absolute;
-      top: 80px;
+      top: 50px;
       right: 20px;
-      padding: 20px;
       background-color: white;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -95,6 +96,14 @@ body {
     .nav-list.show {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin:5px;
+      padding-left: 0px;
+    }
+
+    .nav-list.show li{
+      margin: 20px; /* add margin-bottom */
     }
   
     .hamburger {
@@ -178,42 +187,57 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 6px solid #f1f1f1;
-  padding: 5px;
-  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.project-image {
-  max-width: 100%;
-  margin-bottom: 20px;
-  border-radius: 20px;
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project-text {
+  text-align: center;
 }
 
 .project-title {
   font-size: 1.5rem;
-  margin-top: 20px;
+  font-weight: bold;
   margin-bottom: 10px;
+  color: #333;
 }
 
 .project-description {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: #666;
   margin-bottom: 20px;
 }
 
 .project-button-sm {
   display: inline-block;
-  padding: 8px 16px;
-  background-color: #444444;
-  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #333;
+  color: #fff;
   text-decoration: none;
-  border-radius: 50px;
   transition: all 0.3s ease;
 }
 
 .project-button-sm:hover {
-  background-color: #f1f1f1;
-  color: #444444;
+  background-color: #444;
 }
+
   .project-card {
     background-color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
